@@ -276,7 +276,6 @@ class Client(ASTMProtocol):
         raise NotAccepted('Client should not receive ASTM message.')
 
     def on_timeout(self):
-        """If timeout had occurs for sending ENQ message, it will try to be
-        repeated."""
+        """Sends final EOT message and closes connection after his receiving."""
         super(Client, self).on_timeout()
         self._close_session(True)

@@ -139,6 +139,7 @@ class RequestHandler(ASTMProtocol):
         return super(RequestHandler, self).discard_input_buffers()
 
     def on_timeout(self):
+        """Closes connection on timeout."""
         super(RequestHandler, self).on_timeout()
         self.close()
 

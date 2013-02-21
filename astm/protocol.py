@@ -169,7 +169,7 @@ class ASTMProtocol(AsyncChat):
         self.terminator = 1
 
     def on_timeout(self):
-        """Calls when timeout event occurs. Used to limit time for waiting
+        """Calls when timeout event occurs. Used to limit waiting time for
         response data."""
         log.warn('Communication timeout')
 
